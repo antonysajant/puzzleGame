@@ -14,7 +14,7 @@ public class GridManager : MonoBehaviour
     [SerializeField] float cellsize = 0.5f;
     [SerializeField] Vector2 startPos = new Vector2(-2.75f, -2.75f);
 
-    [SerializeField] GameObject normaBlock;
+    [SerializeField] GameObject normalBlock;
     [SerializeField] GameObject goalBlock;
 
     [SerializeField] BlockData[] levelBlocks;
@@ -29,15 +29,21 @@ public class GridManager : MonoBehaviour
         {
             if (!IsWithinBounds(data)) continue;
 
-            Vector2 pos = startPos + new Vector2(data.startX * cellsize, data.startY * cellsize);
-            GameObject prefab = data.isGoal ? goalBlock : normaBlock;
+            /*Vector2 pos = startPos + new Vector2(data.startX * cellsize, data.startY * cellsize);*/
+            int flippedY = (rows - 1) - data.startY;
+            float offsetX = data.isHorizontal ? (data.length - 1) * 0.5f * cellsize : 0f;
+            float offsetY = data.isHorizontal ? 0f : ((data.length - 1) * 0.5f -1f)* cellsize;
+
+            Vector2 pos = startPos + new Vector2(data.startX * cellsize + offsetX, flippedY * cellsize + offsetY);
+
+            GameObject prefab = data.isGoal ? goalBlock : normalBlock;
             GameObject block = Instantiate(prefab, pos, Quaternion.identity, transform);
             block.name = $"Block_{data.startX}_{data.startY}";
 
             if (data.isHorizontal)
-                block.transform.localScale = new Vector3(transform.localScale.x * data.length, transform.localScale.y, transform.localScale.z);
+                block.transform.localScale = new Vector3(block.transform.localScale.x * data.length, block.transform.localScale.y, block.transform.localScale.z);
             else
-                block.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y * data.length, transform.localScale.z);
+                block.transform.localScale = new Vector3(block.transform.localScale.x, block.transform.localScale.y * data.length, block.transform.localScale.z);
 
             for (int i = 0; i < data.length; i++)
             {
