@@ -1098,6 +1098,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Block
       objectReference: {fileID: 0}
+    - target: {fileID: 1012205488998672862, guid: 44ed1672ac2e73f4a8829478138f9d14, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.0279
+      objectReference: {fileID: 0}
     - target: {fileID: 1066025223366585522, guid: 44ed1672ac2e73f4a8829478138f9d14, type: 3}
       propertyPath: m_Name
       value: TestBlocks
@@ -1162,6 +1166,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5224858229590981799, guid: 44ed1672ac2e73f4a8829478138f9d14, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.56200004
+      objectReference: {fileID: 0}
     - target: {fileID: 5970959432984665845, guid: 44ed1672ac2e73f4a8829478138f9d14, type: 3}
       propertyPath: m_TagString
       value: Block
@@ -1174,12 +1182,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Block
       objectReference: {fileID: 0}
+    - target: {fileID: 8203994990463371331, guid: 44ed1672ac2e73f4a8829478138f9d14, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.47210002
+      objectReference: {fileID: 0}
     - target: {fileID: 8719736354633868977, guid: 44ed1672ac2e73f4a8829478138f9d14, type: 3}
       propertyPath: m_TagString
       value: Block
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 659217912130977070, guid: 44ed1672ac2e73f4a8829478138f9d14, type: 3}
+    - {fileID: 4724752560893192049, guid: 44ed1672ac2e73f4a8829478138f9d14, type: 3}
+    - {fileID: 3344963970537678165, guid: 44ed1672ac2e73f4a8829478138f9d14, type: 3}
+    - {fileID: 1639162667880438633, guid: 44ed1672ac2e73f4a8829478138f9d14, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44ed1672ac2e73f4a8829478138f9d14, type: 3}
