@@ -9,7 +9,9 @@ public class DragController : MonoBehaviour
     bool isDragActive = false;
     Vector2 screenPos;
     Vector3 worldPos;
+    public Vector2 dragTargetPos;
     Block lastDragged;
+    public bool canDrag = true;
 
     void Awake()
     {
@@ -59,6 +61,24 @@ public class DragController : MonoBehaviour
         }
     }
 
+    void FixedUpdate()
+    {
+        if (!canDrag) return;
+
+        if (isDragActive && lastDragged != null)
+        {
+            Rigidbody2D rb = lastDragged.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                Vector2 current = rb.position;
+                Vector2 newPos = Vector2.Lerp(current, dragTargetPos, 0.2f);
+                if (Vector2.Distance(newPos, current) > 0.001f)
+                    rb.MovePosition(newPos);
+            }
+        }
+    }
+
+
     void InitDrag()
     {
         isDragActive = true;
@@ -66,15 +86,16 @@ public class DragController : MonoBehaviour
 
     void Drag()
     {
-        Block draggable = lastDragged.GetComponent<Block>();
-        lastDragged.transform.position = new Vector2(
-            draggable.getBlock() ? worldPos.x : lastDragged.transform.position.x,
-            draggable.getBlock() ? lastDragged.transform.position.y : worldPos.y
+        dragTargetPos = new Vector2(
+            lastDragged.getBlock() ? worldPos.x : lastDragged.transform.position.x,
+            lastDragged.getBlock() ? lastDragged.transform.position.y : worldPos.y
             );
     }
 
     void Drop()
     {
         isDragActive = false;
+        lastDragged = null;
+        canDrag = true;
     }
 }
