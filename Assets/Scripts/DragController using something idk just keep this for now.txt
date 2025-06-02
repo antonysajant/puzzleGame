@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
+using Unity.Android.Gradle;
 using UnityEngine;
 
 public class DragController : MonoBehaviour
@@ -9,8 +11,8 @@ public class DragController : MonoBehaviour
     Vector3 worldPos;
     public Vector2 dragTargetPos;
     Block lastDragged;
-    Rigidbody2D rb;
     public bool canDrag = true;
+    Rigidbody2D rb;
 
     void Awake()
     {
@@ -29,16 +31,15 @@ public class DragController : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            screenPos = Input.mousePosition;
+            Vector3 mousePos = Input.mousePosition;
+            screenPos = new Vector2(mousePos.x, mousePos.y);
         }
         else if (Input.touchCount > 0)
         {
             screenPos = Input.GetTouch(0).position;
         }
         else
-        {
             return;
-        }
 
         worldPos = Camera.main.ScreenToWorldPoint(screenPos);
 
@@ -46,12 +47,12 @@ public class DragController : MonoBehaviour
         {
             Drag();
         }
-        else
+        else 
         {
             RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.zero);
             if (hit.collider != null)
             {
-                Block draggable = hit.transform.GetComponent<Block>();
+                Block draggable = hit.transform.gameObject.GetComponent<Block>();
                 if (draggable != null)
                 {
                     lastDragged = draggable;
@@ -63,30 +64,29 @@ public class DragController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (rb == null || lastDragged == null)
-            return;
-
+        if(lastDragged!=null)
+             rb = lastDragged.GetComponent<Rigidbody2D>();
         if (!canDrag)
         {
-            rb.linearVelocity = Vector2.zero;
-            rb.angularVelocity = 0f;
+            rb.linearVelocityX = 0f;
+            rb.linearVelocityY = 0f;
             return;
         }
-
-        if (isDragActive)
+        if (isDragActive && lastDragged != null)
         {
-            Vector2 current = rb.position;
-            Vector2 newPos = Vector2.Lerp(current, dragTargetPos, 0.2f);
-            if (Vector2.Distance(newPos, current) > 0.001f)
-                rb.MovePosition(newPos);
+            {
+                Vector2 current = rb.position;
+                Vector2 newPos = Vector2.Lerp(current, dragTargetPos, 0.2f);
+                if (Vector2.Distance(newPos, current) > 0.001f)
+                    rb.MovePosition(newPos);
+            }
         }
     }
+
 
     void InitDrag()
     {
         isDragActive = true;
-        rb = lastDragged.GetComponent<Rigidbody2D>();
-        rb.linearVelocity = Vector2.zero;
     }
 
     void Drag()
@@ -94,19 +94,13 @@ public class DragController : MonoBehaviour
         dragTargetPos = new Vector2(
             lastDragged.getBlock() ? worldPos.x : lastDragged.transform.position.x,
             lastDragged.getBlock() ? lastDragged.transform.position.y : worldPos.y
-        );
+            );
     }
 
     void Drop()
     {
         isDragActive = false;
-        canDrag = true;
-        if (rb != null)
-        {
-            rb.linearVelocity = Vector2.zero;
-            rb.angularVelocity = 0f;
-        }
         lastDragged = null;
-        rb = null;
+        canDrag = true;
     }
 }
