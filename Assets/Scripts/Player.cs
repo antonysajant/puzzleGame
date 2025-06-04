@@ -20,12 +20,8 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("Hello");
-
         if (isIdle)
         {
-            anim.SetBool("idleD", true);
-
             hit = Physics2D.Raycast(transform.position, Vector2.up);
             if (hit.collider == null || hit.transform.tag == "Gates")
             {
@@ -115,12 +111,14 @@ public class Player : MonoBehaviour
         anim.SetBool("runU", false);
         anim.SetBool("runD", false);
         isIdle = true;
+        anim.SetBool("idleD", true);
         dir = 'X';
     }
 
     void startMove()
     {
         isIdle = false;
+        anim.SetBool("idleD", false);
         isMoving = true;
     }
 

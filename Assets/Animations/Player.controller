@@ -113,18 +113,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: idleD
     m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: runU
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: runD
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: runL
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: runR
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6937741970797328869}
   m_Solo: 0
