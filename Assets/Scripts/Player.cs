@@ -4,7 +4,6 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     Animator anim;
-    char dir = 'X'; // U = Up, D = Down, L = Left, R = Right
     bool isIdle = true;
     Rigidbody2D rb;
     [SerializeField]Vector3 newPos;
@@ -29,60 +28,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         if (isIdle)
-        {
             anim.SetBool("idleD", true);
-
-            current = transform.position;
-
-            /*if(Physics2D.OverlapPoint(checkUp.transform.position)==null || IsGateAt(checkUp.transform.position))
-            {
-                Debug.Log("Moving UP");
-                dir = 'U';
-                newPos = checkUp.transform.position;
-                startMove();
-            }
-            else
-            {
-                if (Physics2D.OverlapPoint(checkLeft.transform.position) == null)
-                {
-                    Debug.Log("Moving LEFT");
-                    dir = 'L';
-                    newPos = checkLeft.transform.position;
-                    startMove();
-                }
-                else
-                {
-                    if (Physics2D.OverlapPoint(checkRight.transform.position) == null)
-                    {
-                        Debug.Log("Moving RIGHT");
-                        dir = 'R';
-                        newPos = checkRight.transform.position;
-                        startMove();
-                    }
-                    else
-                    {
-                        if (Physics2D.OverlapPoint(checkDown.transform.position) == null)
-                        {
-                            Debug.Log("Moving DOWN");
-                            dir = 'D';
-                            newPos = checkDown.transform.position;
-                            startMove();
-                        }
-                    }
-                }
-            }*/
-        }
-        if (!isIdle)
-        { 
-            if (dir == 'L')
-                anim.SetBool("runL", true);
-            else if (dir == 'R')
-                anim.SetBool("runR", true);
-            else if (dir == 'U')
-                anim.SetBool("runU", true);
-            else if (dir == 'D')
-                anim.SetBool("runD", true);
-        }
 
         if(!isIdle)
             transform.position = Vector3.MoveTowards(transform.position, newPos, 0.01f);
@@ -102,7 +48,6 @@ public class Player : MonoBehaviour
         anim.SetBool("runD", false);
         isIdle = true;
         anim.SetBool("idleD", true);
-        dir = 'X';
     }
 
     void startMove()
@@ -134,7 +79,7 @@ public class Player : MonoBehaviour
         if (Physics2D.OverlapPoint(checkUp.transform.position) == null || IsGateAt(checkUp.transform.position))
         {
             Debug.Log("Moving UP");
-            dir = 'U';
+            anim.SetBool("runU", true);
             newPos = checkUp.transform.position;
             startMove();
         }
@@ -143,7 +88,7 @@ public class Player : MonoBehaviour
             if (Physics2D.OverlapPoint(checkLeft.transform.position) == null)
             {
                 Debug.Log("Moving LEFT");
-                dir = 'L';
+                anim.SetBool("runL", true);
                 newPos = checkLeft.transform.position;
                 startMove();
             }
@@ -152,7 +97,7 @@ public class Player : MonoBehaviour
                 if (Physics2D.OverlapPoint(checkRight.transform.position) == null)
                 {
                     Debug.Log("Moving RIGHT");
-                    dir = 'R';
+                    anim.SetBool("runR", true);
                     newPos = checkRight.transform.position;
                     startMove();
                 }
@@ -161,7 +106,7 @@ public class Player : MonoBehaviour
                     if (Physics2D.OverlapPoint(checkDown.transform.position) == null)
                     {
                         Debug.Log("Moving DOWN");
-                        dir = 'D';
+                        anim.SetBool("runD", true);
                         newPos = checkDown.transform.position;
                         startMove();
                     }
