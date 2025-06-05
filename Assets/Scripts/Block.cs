@@ -7,6 +7,7 @@ public class Block : MonoBehaviour
     DragController dg;
     bool run = false;
 
+    [System.Obsolete]
     void Awake()
     {
         dg = FindObjectOfType<DragController>();

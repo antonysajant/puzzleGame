@@ -12,6 +12,7 @@ public class DragController : MonoBehaviour
     Rigidbody2D rb;
     public bool canDrag = true;
 
+    [System.Obsolete]
     void Awake()
     {
         DragController[] controllers = FindObjectsOfType<DragController>();
