@@ -7684,6 +7684,7 @@ GameObject:
   - component: {fileID: 444612049}
   - component: {fileID: 444612052}
   - component: {fileID: 444612054}
+  - component: {fileID: 444612055}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -7840,7 +7841,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444612048}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f767d3a320c1e645a79d0ff0e7b10dd, type: 3}
   m_Name: 
@@ -7851,6 +7852,21 @@ MonoBehaviour:
   checkDown: {fileID: 1085009131}
   checkLeft: {fileID: 1182908518}
   checkRight: {fileID: 2018203896}
+  count: 0
+  dgmove: 0
+--- !u!114 &444612055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444612048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42468b46c1651a34e97ae4f787f02ef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartPosition: {x: 0.485, y: -3.45}
 --- !u!1 &454229372
 GameObject:
   m_ObjectHideFlags: 0
@@ -11339,6 +11355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragTargetPos: {x: 0, y: 0}
   canDrag: 1
+  move: 0
 --- !u!4 &1806070518
 Transform:
   m_ObjectHideFlags: 0

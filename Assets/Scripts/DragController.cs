@@ -11,6 +11,7 @@ public class DragController : MonoBehaviour
     Block lastDragged;
     Rigidbody2D rb;
     public bool canDrag = true;
+    public bool move=false;
 
     [System.Obsolete]
     void Awake()
@@ -18,6 +19,10 @@ public class DragController : MonoBehaviour
         DragController[] controllers = FindObjectsOfType<DragController>();
         if (controllers.Length > 1)
             Destroy(gameObject);
+    }
+    void Start()
+    {
+        Debug.Log("move TRUE");
     }
 
     void Update()
@@ -109,5 +114,7 @@ public class DragController : MonoBehaviour
         }
         lastDragged = null;
         rb = null;
+        move = true;
+        Debug.Log("move TRUE");
     }
 }

@@ -6,36 +6,52 @@ public class Player : MonoBehaviour
     Animator anim;
     bool isIdle = true;
     Rigidbody2D rb;
-    [SerializeField]Vector3 newPos;
+    [SerializeField] Vector3 newPos;
     [SerializeField] Vector3 current;
     [SerializeField] GameObject checkUp;
     [SerializeField] GameObject checkDown;
     [SerializeField] GameObject checkLeft;
     [SerializeField] GameObject checkRight;
+    DragController dg;
+    [SerializeField] int count = 0;
+    [SerializeField] bool dgmove;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         newPos = transform.position;
+        dg = FindObjectOfType<DragController>();
     }
 
     private void Start()
     {
-        InvokeRepeating(nameof(CheckForMove), 0f, 1.5f);
+        InvokeRepeating(nameof(CheckForMove), 0f, 1f);
+        newPos = Vector3.zero;
     }
 
     private void Update()
     {
+        dgmove = dg.move;
         if (isIdle) //if idle do idle animation
             anim.SetBool("idleD", true);
 
-        if (!isIdle) // if not idle, time to 
+        if (!isIdle && dg.move)
+        {
             transform.position = Vector3.MoveTowards(transform.position, newPos, 0.01f);
 
-        if (Vector3.Distance(transform.position, newPos) < 0.02f)
-            goIdle();
-
+            if (Vector3.Distance(transform.position, newPos) < 0.02f)
+            {
+                goIdle();
+                if (count == 2)
+                {
+                    count = 0;
+                    dg.move = false;
+                    Debug.Log("Move FALSE");
+                }
+            }
+        }
+            
         current = transform.position;
     }
 
@@ -48,6 +64,7 @@ public class Player : MonoBehaviour
         anim.SetBool("runD", false);
         isIdle = true;
         anim.SetBool("idleD", true);
+        count++;
     }
 
     void startMove() // sets isIdle and animation to false
@@ -76,7 +93,11 @@ public class Player : MonoBehaviour
 
     void CheckForMove()
     {
+        if (!dg.move) return;
+
         if (!isIdle) return;
+
+        if (count == 2) return;
 
         //Vector3 x = Vector3.zero ;
         if (Physics2D.OverlapPoint(checkUp.transform.position) == null || IsGateAt(checkUp.transform.position))
