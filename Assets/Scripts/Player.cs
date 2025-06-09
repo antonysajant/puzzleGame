@@ -130,7 +130,7 @@ public class Player : MonoBehaviour
                 x = x + Vector3.right;
             } while (Physics2D.OverlapPoint(checkRight.transform.position + x) == null);
         }
-        if (Physics2D.OverlapPoint(checkDown.transform.position) == null || !IsGateAt(checkDown.transform.position))
+        /*if (Physics2D.OverlapPoint(checkDown.transform.position) == null || !IsGateAt(checkDown.transform.position))
         {
             x = Vector3.zero;
             do
@@ -138,8 +138,8 @@ public class Player : MonoBehaviour
                 GameObject wp = Instantiate(waypoint, checkDown.transform.position + x + yoff, Quaternion.identity);
                 wp.transform.parent = waypoints.transform;
                 x = x + Vector3.down;
-            } while (Physics2D.OverlapPoint(checkDown.transform.position + x) == null || !IsGateAt(checkDown.transform.position + x));
-        }
+            } while (Physics2D.OverlapPoint(checkDown.transform.position + x) == null);
+        }*/
         wpcreated = true;
     }
 }
