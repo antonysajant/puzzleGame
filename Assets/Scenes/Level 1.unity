@@ -7852,8 +7852,11 @@ MonoBehaviour:
   checkDown: {fileID: 1085009131}
   checkLeft: {fileID: 1182908518}
   checkRight: {fileID: 2018203896}
-  count: 0
   dgmove: 0
+  waypoint: {fileID: 3845598836803057494, guid: e44dfe87f1d4d1440841bb051e1bc68e, type: 3}
+  yOffset: 0.571
+  xOffset: 0.176
+  wpcreated: 0
 --- !u!114 &444612055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9456,7 +9459,7 @@ Transform:
   m_GameObject: {fileID: 1140668719}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
-  m_LocalPosition: {x: 2.066, y: -2.4493, z: 10.032341}
+  m_LocalPosition: {x: 4.066, y: -2.4493, z: 10.032341}
   m_LocalScale: {x: 0.63759845, y: 0.60391116, z: 0.86565}
   m_ConstrainProportionsScale: 0
   m_Children:
