@@ -3,11 +3,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    Animator anim;
+    public Animator anim;
     bool isIdle = true;
     Rigidbody2D rb;
     public Vector3 newPos;
-    [SerializeField] Vector3 current;
     [SerializeField] GameObject checkUp;
     [SerializeField] GameObject checkDown;
     [SerializeField] GameObject checkLeft;
@@ -15,8 +14,9 @@ public class Player : MonoBehaviour
     DragController dg;
     [SerializeField] bool dgmove;
     [SerializeField] GameObject waypoint;
-    [SerializeField] float yOffset;
-    [SerializeField] float xOffset;
+    [SerializeField] float upOffset=0.3f;
+    [SerializeField] float xOffset=0.176f;
+    [SerializeField] float yOffset=0.372f;
     public bool wpcreated = false;
 
     private void Awake()
@@ -48,8 +48,6 @@ public class Player : MonoBehaviour
                 goIdle();
             }
         }
-            
-        current = transform.position;
     }
 
     [ContextMenu("Idle")]
@@ -99,47 +97,59 @@ public class Player : MonoBehaviour
 
         Vector3 x;
         Vector3 xoff = new Vector3(xOffset, 0, 0);
+        Vector3 upoff = new Vector3(0, upOffset, 0);
         Vector3 yoff = new Vector3(0, yOffset, 0);
         if (Physics2D.OverlapPoint(checkUp.transform.position) == null || IsGateAt(checkUp.transform.position))
         {
+            int i = 0;
             x = Vector3.zero;
             do
             {
-                GameObject wp=Instantiate(waypoint,checkUp.transform.position + x-yoff, Quaternion.identity);
+                i++;
+                GameObject wp=Instantiate(waypoint,checkUp.transform.position + x-upoff, Quaternion.identity);
                 wp.transform.parent=waypoints.transform;
+                wp.name = $"Waypoint U{i}";
                 x = x + Vector3.up;
             } while (Physics2D.OverlapPoint(checkUp.transform.position + x) == null || IsGateAt(checkUp.transform.position + x)) ;
         }
         if (Physics2D.OverlapPoint(checkLeft.transform.position) == null)
         {
+            int i = 0;
             x = Vector3.zero;
             do
             {
+                i++;
                 GameObject wp = Instantiate(waypoint, checkLeft.transform.position + x +xoff-yoff, Quaternion.identity);
                 wp.transform.parent = waypoints.transform;
+                wp.name = $"Waypoint L{i}";
                 x = x + Vector3.left;
             } while (Physics2D.OverlapPoint(checkLeft.transform.position + x) == null);
         }
         if (Physics2D.OverlapPoint(checkRight.transform.position) == null)
         {
+            int i = 0;
             x = Vector3.zero;
             do
             {
+                i++;
                 GameObject wp = Instantiate(waypoint, checkRight.transform.position + x -xoff-yoff, Quaternion.identity);
                 wp.transform.parent = waypoints.transform;
+                wp.name = $"Waypoint R{i}";
                 x = x + Vector3.right;
             } while (Physics2D.OverlapPoint(checkRight.transform.position + x) == null);
         }
-        /*if (Physics2D.OverlapPoint(checkDown.transform.position) == null || !IsGateAt(checkDown.transform.position))
-        {
+        if ((Physics2D.OverlapPoint(checkDown.transform.position) == null || !IsGateAt(checkDown.transform.position))&&transform.position.y>=-1f)        {
+            int i = 0;
             x = Vector3.zero;
             do
             {
-                GameObject wp = Instantiate(waypoint, checkDown.transform.position + x + yoff, Quaternion.identity);
+                i++;
+                GameObject wp = Instantiate(waypoint, checkDown.transform.position + x, Quaternion.identity);
                 wp.transform.parent = waypoints.transform;
+                wp.name = $"Waypoint D{i}";
                 x = x + Vector3.down;
             } while (Physics2D.OverlapPoint(checkDown.transform.position + x) == null);
-        }*/
+        }
         wpcreated = true;
     }
 }

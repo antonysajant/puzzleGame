@@ -20,10 +20,6 @@ public class DragController : MonoBehaviour
         if (controllers.Length > 1)
             Destroy(gameObject);
     }
-    void Start()
-    {
-        Debug.Log("move TRUE");
-    }
 
     void Update()
     {
