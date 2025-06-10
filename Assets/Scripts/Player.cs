@@ -59,6 +59,7 @@ public class Player : MonoBehaviour
         anim.SetBool("runD", false);
         isIdle = true;
         anim.SetBool("idleD", true);
+        dg.move = false;
     }
 
     public void startMove() // sets isIdle and animation to false
@@ -66,6 +67,9 @@ public class Player : MonoBehaviour
         isIdle = false;
         anim.SetBool("idleD", false);
         Debug.Log($"Moving to {newPos} from {transform.position}");
+        GameObject waypoints = GameObject.Find("Waypoints");
+        Destroy(waypoints);
+        wpcreated = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
