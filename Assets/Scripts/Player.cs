@@ -142,7 +142,8 @@ public class Player : MonoBehaviour
                 x = x + Vector3.right;
             } while (Physics2D.OverlapPoint(checkRight.transform.position + x) == null);
         }
-        if ((Physics2D.OverlapPoint(checkDown.transform.position) == null || !IsGateAt(checkDown.transform.position))&&transform.position.y>=-1f)        {
+        if (Physics2D.OverlapPoint(checkDown.transform.position) == null && transform.position.y>=-1f)        
+        {
             int i = 0;
             x = Vector3.zero;
             do
