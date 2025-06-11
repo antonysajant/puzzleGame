@@ -20,16 +20,20 @@ public class Waypoint : MonoBehaviour
 
     void Update()
     {
-        
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.transform.tag=="Block")
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
-            Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
+            Vector3 touchPos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+            Vector2 touchPos2D = new Vector2(touchPos.x, touchPos.y);
+
+            RaycastHit2D hit = Physics2D.Raycast(touchPos2D, Vector2.zero);
+
+            if (hit.collider != null && hit.collider.gameObject == gameObject)
+            {
+                setPos();
+            }
         }
     }
+
     void OnMouseDown()
     {
         setPos();

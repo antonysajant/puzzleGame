@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3306290067459912646}
   - component: {fileID: 4917627356967371856}
-  - component: {fileID: 8720919137731233970}
   - component: {fileID: -7284487971973860801}
+  - component: {fileID: 8423769011507603773}
   m_Layer: 0
   m_Name: Waypoint
   m_TagString: Untagged
@@ -89,8 +89,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &8720919137731233970
-CircleCollider2D:
+--- !u!114 &-7284487971973860801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3845598836803057494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eef4473ac836e94d985a9ee153db03f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  n: 0
+  dir: 0
+--- !u!61 &8423769011507603773
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -119,23 +133,19 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.06079958, y: 0.04728855}
-  m_Radius: 0.29999998
---- !u!114 &-7284487971973860801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3845598836803057494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3eef4473ac836e94d985a9ee153db03f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  n: 0
-  dir: 0
+  m_Offset: {x: -0.060622968, y: 0.042941242}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.2, y: 0.2}
+    newSize: {x: 0.875, y: 0.875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.5940495, y: 0.5839457}
+  m_EdgeRadius: 0
