@@ -64,7 +64,6 @@ public class Waypoint : MonoBehaviour
             p.newPos = p.transform.position + n * Vector3.down;
             p.anim.SetBool("runD", true);
         }
-           
         p.startMove();
     }
 }

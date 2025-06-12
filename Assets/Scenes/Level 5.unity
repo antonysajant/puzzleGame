@@ -363,7 +363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5859369373512590803, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_BodyType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8599652908114542808, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_Name
@@ -431,7 +431,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128238737}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -439,7 +439,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f62d10b282b35a44b14e6886d078da7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -460,7 +460,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f62d10b282b35a44b14e6886d078da7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -9987,7 +9987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5859369373512590803, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_BodyType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8599652908114542808, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_Name
@@ -10068,7 +10068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5859369373512590803, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_BodyType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8599652908114542808, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_Name
@@ -10136,7 +10136,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443894666}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -10144,7 +10144,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f62d10b282b35a44b14e6886d078da7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -10165,7 +10165,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f62d10b282b35a44b14e6886d078da7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -10437,7 +10437,6 @@ MonoBehaviour:
   checkDown: {fileID: 1085009131}
   checkLeft: {fileID: 1182908518}
   checkRight: {fileID: 2018203896}
-  dgmove: 0
   waypoint: {fileID: 3845598836803057494, guid: e44dfe87f1d4d1440841bb051e1bc68e, type: 3}
   upOffset: 0.3
   xOffset: 0.176
@@ -10864,7 +10863,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631359455}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -10872,7 +10871,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f62d10b282b35a44b14e6886d078da7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -10893,7 +10892,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f62d10b282b35a44b14e6886d078da7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -12102,7 +12101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5859369373512590803, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_BodyType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8599652908114542808, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_Name
@@ -12601,7 +12600,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1261718066}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -12609,7 +12608,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f62d10b282b35a44b14e6886d078da7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -12630,7 +12629,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f62d10b282b35a44b14e6886d078da7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -14269,7 +14268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5859369373512590803, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_BodyType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8599652908114542808, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_Name
@@ -14310,7 +14309,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragTargetPos: {x: 0, y: 0}
-  canDrag: 1
   move: 0
 --- !u!4 &1806070518
 Transform:
@@ -14765,7 +14763,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5859369373512590803, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_BodyType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8599652908114542808, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_Name
@@ -14963,7 +14961,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5859369373512590803, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_BodyType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8599652908114542808, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_Name

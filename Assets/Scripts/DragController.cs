@@ -10,7 +10,6 @@ public class DragController : MonoBehaviour
     public Vector2 dragTargetPos;
     Block lastDragged;
     Rigidbody2D rb;
-    public bool move=false;
 
     [System.Obsolete]
     void Awake()
@@ -70,14 +69,13 @@ public class DragController : MonoBehaviour
         if (isDragActive)
         {
             rb.MovePosition(dragTargetPos);
-    }
-
         }
+
+    }
     void InitDrag()
     {
         isDragActive = true;
         rb = lastDragged.GetComponent<Rigidbody2D>();
-        rb.bodyType = RigidbodyType2D.Dynamic;
     }
 
     void Drag()
@@ -98,7 +96,13 @@ public class DragController : MonoBehaviour
         }
         lastDragged = null;
         rb.bodyType = RigidbodyType2D.Kinematic;
+        StartCoroutine(rbdynamic());
         rb = null;
-        move = true;
+    }
+
+    IEnumerator rbdynamic()
+    {
+        yield return new WaitForSeconds(0.5f);
+        rb.bodyType = RigidbodyType2D.Dynamic;
     }
 }
