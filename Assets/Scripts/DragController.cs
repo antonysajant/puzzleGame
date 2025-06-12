@@ -10,7 +10,6 @@ public class DragController : MonoBehaviour
     public Vector2 dragTargetPos;
     Block lastDragged;
     Rigidbody2D rb;
-    public bool canDrag = true;
     public bool move=false;
 
     [System.Obsolete]
@@ -68,27 +67,17 @@ public class DragController : MonoBehaviour
         if (rb == null || lastDragged == null)
             return;
 
-        if (!canDrag)
-        {
-            rb.linearVelocity = Vector2.zero;
-            rb.angularVelocity = 0f;
-            return;
-        }
-
         if (isDragActive)
         {
-            Vector2 current = rb.position;
-            Vector2 newPos = Vector2.Lerp(current, dragTargetPos, 0.2f);
-            if (Vector2.Distance(newPos, current) > 0.001f)
-                rb.MovePosition(newPos);
-        }
+            rb.MovePosition(dragTargetPos);
     }
 
+        }
     void InitDrag()
     {
         isDragActive = true;
         rb = lastDragged.GetComponent<Rigidbody2D>();
-        rb.linearVelocity = Vector2.zero;
+        rb.bodyType = RigidbodyType2D.Dynamic;
     }
 
     void Drag()
@@ -102,15 +91,14 @@ public class DragController : MonoBehaviour
     void Drop()
     {
         isDragActive = false;
-        canDrag = true;
         if (rb != null)
         {
             rb.linearVelocity = Vector2.zero;
             rb.angularVelocity = 0f;
         }
         lastDragged = null;
+        rb.bodyType = RigidbodyType2D.Kinematic;
         rb = null;
         move = true;
-        Debug.Log("move TRUE");
     }
 }

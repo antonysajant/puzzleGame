@@ -11,7 +11,6 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject checkLeft;
     [SerializeField] GameObject checkRight;
     DragController dg;
-    [SerializeField] bool dgmove;
     [SerializeField] GameObject waypoint;
     [SerializeField] float upOffset=0.3f;
     [SerializeField] float xOffset=0.176f;
@@ -34,11 +33,10 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        dgmove = dg.move;
         if (isIdle) //if idle do idle animation
             anim.SetBool("idleD", true);
 
-        if (!isIdle && dg.move)
+        if (!isIdle)
         {
             transform.position = Vector3.MoveTowards(transform.position, newPos, 0.01f);
 
@@ -58,7 +56,6 @@ public class Player : MonoBehaviour
         anim.SetBool("runD", false);
         isIdle = true;
         anim.SetBool("idleD", true);
-        dg.move = false;
     }
 
     public void startMove() // sets isIdle and animation to false
@@ -90,8 +87,6 @@ public class Player : MonoBehaviour
 
     void CheckForMove()
     {
-        if (!dg.move) return;
-
         if (!isIdle) return;
 
         if (wpcreated) return;

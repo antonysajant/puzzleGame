@@ -302,7 +302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3059232639985576291, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_Size.x
-      value: 3.1137638
+      value: 3.1001806
       objectReference: {fileID: 0}
     - target: {fileID: 3059232639985576291, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_Size.y
@@ -310,15 +310,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3059232639985576291, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_Offset.x
-      value: -0.009438992
+      value: -0.016230643
       objectReference: {fileID: 0}
     - target: {fileID: 3059232639985576291, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_Offset.y
-      value: 0.002487868
+      value: 0.0024878979
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284485680986014503, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5859369373512590803, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_BodyType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8599652908114542808, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_Name
@@ -9793,7 +9797,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957810153}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -9801,7 +9805,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f62d10b282b35a44b14e6886d078da7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -9822,7 +9826,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f62d10b282b35a44b14e6886d078da7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -9846,7 +9850,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0002628863, y: 0.0010519028}
+  m_Offset: {x: 0.0030777752, y: 0.0010519028}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -9856,7 +9860,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.6069186, y: 3.1832972}
+  m_Size: {x: 1.5868738, y: 3.1832972}
   m_EdgeRadius: 0
 --- !u!212 &957810158
 SpriteRenderer:
@@ -9970,7 +9974,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055926459}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -9978,7 +9982,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f62d10b282b35a44b14e6886d078da7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -9999,7 +10003,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f62d10b282b35a44b14e6886d078da7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -10216,7 +10220,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1140668719}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -10224,7 +10228,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f62d10b282b35a44b14e6886d078da7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -10245,7 +10249,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f62d10b282b35a44b14e6886d078da7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -10522,7 +10526,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241402202}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -10530,7 +10534,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f62d10b282b35a44b14e6886d078da7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -10551,7 +10555,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f62d10b282b35a44b14e6886d078da7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -10575,7 +10579,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0002628863, y: 0.0010519028}
+  m_Offset: {x: 0.0064187944, y: 0.0010519028}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -10585,7 +10589,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.6069186, y: 3.1832972}
+  m_Size: {x: 1.5668285, y: 3.1832972}
   m_EdgeRadius: 0
 --- !u!212 &1241402207
 SpriteRenderer:
@@ -10717,7 +10721,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1129224597, guid: e54463e149e937b4994019952114c710, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11947,7 +11951,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722750136}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -11955,7 +11959,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f62d10b282b35a44b14e6886d078da7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -11976,7 +11980,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f62d10b282b35a44b14e6886d078da7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -12097,7 +12101,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragTargetPos: {x: 0, y: 0}
-  canDrag: 1
   move: 0
 --- !u!4 &1806070518
 Transform:
@@ -12797,9 +12800,13 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.0024878979
       objectReference: {fileID: 0}
+    - target: {fileID: 4284485680986014503, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5859369373512590803, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_BodyType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5859369373512590803, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_Interpolate
