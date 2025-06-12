@@ -76,6 +76,7 @@ public class DragController : MonoBehaviour
     {
         isDragActive = true;
         rb = lastDragged.GetComponent<Rigidbody2D>();
+        rb.bodyType = RigidbodyType2D.Dynamic;
     }
 
     void Drag()
