@@ -97,13 +97,7 @@ public class DragController : MonoBehaviour
         }
         lastDragged = null;
         rb.bodyType = RigidbodyType2D.Kinematic;
-        StartCoroutine(rbdynamic());
-        rb = null;
-    }
-
-    IEnumerator rbdynamic()
-    {
-        yield return new WaitForSeconds(0.5f);
         rb.bodyType = RigidbodyType2D.Dynamic;
+        rb = null;
     }
 }

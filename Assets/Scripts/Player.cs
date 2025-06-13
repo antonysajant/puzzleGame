@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
 
         if (!isIdle)
         {
-            transform.position = Vector3.MoveTowards(transform.position, newPos, 0.01f);
+            transform.position = Vector3.MoveTowards(transform.position, newPos, 0.075f);
 
             if (Vector3.Distance(transform.position, newPos) < 0.02f)
             {
@@ -85,8 +85,6 @@ public class Player : MonoBehaviour
     {
         if (collision.transform.tag == "Gates")
             Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
-        if (collision.transform.tag == "Block")
-            goIdle();
     }
 
     bool IsGateAt(Vector3 position) 
