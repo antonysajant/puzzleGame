@@ -8,6 +8,7 @@ TagManager:
   - Border
   - Gates
   - Treasure
+  - Waypoint
   layers:
   - Default
   - TransparentFX

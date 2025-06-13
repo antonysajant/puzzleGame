@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class Treasure : MonoBehaviour
 {
-    GameObject closed;
-    GameObject open;
+    [SerializeField]GameObject closed;
+    [SerializeField]GameObject open;
 
     void Awake()
     {
-        closed = transform.GetChild(0).gameObject;
-        open=transform.GetChild(1).gameObject;
+        //closed = transform.GetChild(0).gameObject;
+        //open=transform.GetChild(1).gameObject;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
