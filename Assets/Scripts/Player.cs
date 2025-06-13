@@ -92,16 +92,16 @@ public class Player : MonoBehaviour
     bool IsGateAt(Vector3 position) 
     {
         Collider2D hit = Physics2D.OverlapPoint(position);
-        if (hit.transform.tag == "Gates")
+        if (hit !=null && hit.transform.tag == "Gates")
             return true;
         else
             return false;
     }
 
-    bool IsBorderAt(Vector3 position)
+    bool IsTreasureAt(Vector3 position)
     {
         Collider2D hit = Physics2D.OverlapPoint(position);
-        if (hit!=null && hit.transform.tag == "Border")
+        if (hit!=null && hit.transform.tag == "Treasure")
             return true;
         else
             return false;
@@ -113,33 +113,33 @@ public class Player : MonoBehaviour
 
         Vector3 x;
 
-        if (Physics2D.OverlapPoint(checkUp.transform.position)==null || IsGateAt(checkUp.transform.position))
+        if (Physics2D.OverlapPoint(checkUp.transform.position)==null || IsGateAt(checkUp.transform.position) || IsTreasureAt(checkUp.transform.position))
         {
             int i = 0;
             x = Vector3.zero;
             do
             {
                 i++;
-                GameObject wp=Instantiate(waypoint,checkUp.transform.position + x/*-upoff*/, Quaternion.identity);
+                GameObject wp=Instantiate(waypoint,checkUp.transform.position + x, Quaternion.identity);
                 wp.transform.parent=waypoints.transform;
                 wp.name = $"Waypoint U{i}";
                 x = x + Vector3.up;
-            } while (Physics2D.OverlapPoint(checkUp.transform.position + x)==null || IsGateAt(checkUp.transform.position+x));
+            } while (Physics2D.OverlapPoint(checkUp.transform.position + x)==null || IsGateAt(checkUp.transform.position+x) || IsTreasureAt(checkUp.transform.position+x));
         }
-        if (Physics2D.OverlapPoint(checkLeft.transform.position) == null)
+        if (Physics2D.OverlapPoint(checkLeft.transform.position) == null || IsTreasureAt(checkLeft.transform.position))
         {
             int i = 0;
             x = Vector3.zero;
             do
             {
                 i++;
-                GameObject wp = Instantiate(waypoint, checkLeft.transform.position + x/* +xoff-yoff*/, Quaternion.identity);
+                GameObject wp = Instantiate(waypoint, checkLeft.transform.position + x, Quaternion.identity);
                 wp.transform.parent = waypoints.transform;
                 wp.name = $"Waypoint L{i}";
                 x = x + Vector3.left;
-            } while (Physics2D.OverlapPoint(checkLeft.transform.position + x) == null);
+            } while (Physics2D.OverlapPoint(checkLeft.transform.position + x) == null || IsTreasureAt(checkLeft.transform.position + x));
         }
-        if (Physics2D.OverlapPoint(checkRight.transform.position) == null)
+        if (Physics2D.OverlapPoint(checkRight.transform.position) == null || IsTreasureAt(checkRight.transform.position))
         {
             int i = 0;
             x = Vector3.zero;
@@ -150,9 +150,9 @@ public class Player : MonoBehaviour
                 wp.transform.parent = waypoints.transform;
                 wp.name = $"Waypoint R{i}";
                 x = x + Vector3.right;
-            } while (Physics2D.OverlapPoint(checkRight.transform.position + x) == null);
+            } while (Physics2D.OverlapPoint(checkRight.transform.position + x) == null || IsTreasureAt(checkRight.transform.position + x));
         }
-        if (Physics2D.OverlapPoint(checkDown.transform.position) == null && transform.position.y >= -1f)
+        if ((Physics2D.OverlapPoint(checkDown.transform.position) == null || IsTreasureAt(checkDown.transform.position))&& transform.position.y >= -1f)
         {
             int i = 0;
             x = Vector3.zero;
@@ -163,7 +163,7 @@ public class Player : MonoBehaviour
                 wp.transform.parent = waypoints.transform;
                 wp.name = $"Waypoint D{i}";
                 x = x + Vector3.down;
-            } while (Physics2D.OverlapPoint(checkDown.transform.position + x) == null);
+            } while (Physics2D.OverlapPoint(checkDown.transform.position + x) == null || IsTreasureAt(checkDown.transform.position + x));
         }
     }
 }

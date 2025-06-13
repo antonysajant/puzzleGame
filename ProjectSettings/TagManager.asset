@@ -7,6 +7,7 @@ TagManager:
   - Block
   - Border
   - Gates
+  - Treasure
   layers:
   - Default
   - TransparentFX

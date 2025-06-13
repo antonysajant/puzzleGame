@@ -310,7 +310,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Props BLOCKS_1
+      name: T1
       rect:
         serializedVersion: 2
         x: 95
@@ -508,7 +508,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Props BLOCKS_10
+      name: T2
       rect:
         serializedVersion: 2
         x: 95
@@ -1550,7 +1550,7 @@ TextureImporter:
         width: 28
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1572,7 +1572,7 @@ TextureImporter:
         width: 52
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1605,9 +1605,9 @@ TextureImporter:
       BlockV: -720040010483703351
       BlockV shadow: 1053982384
       BlockV1: -699063271
+      T1: -486870951431694809
+      T2: 7851254604029721407
       TX Props BLOCKS_0: 4606884876554920208
-      TX Props BLOCKS_1: -486870951431694809
-      TX Props BLOCKS_10: 7851254604029721407
       TX Props BLOCKS_11: 2684047455703824069
       TX Props BLOCKS_12: -3239840328601261712
       TX Props BLOCKS_13: 6140525885042384639
