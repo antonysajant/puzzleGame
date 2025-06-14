@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
 
         if (!isIdle)
         {
-            transform.position = Vector3.MoveTowards(transform.position, newPos, 0.075f);
+            transform.position = Vector3.MoveTowards(transform.position, newPos, 0.05f);
 
             if (Vector3.Distance(transform.position, newPos) < 0.02f)
             {
