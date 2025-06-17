@@ -99,5 +99,6 @@ public class DragController : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Kinematic;
         rb.bodyType = RigidbodyType2D.Dynamic;
         rb = null;
+        AstarPath.active.Scan();
     }
 }
