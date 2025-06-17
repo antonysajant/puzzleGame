@@ -77,6 +77,10 @@ public class DragController : MonoBehaviour
         isDragActive = true;
         rb = lastDragged.GetComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Dynamic;
+        if (lastDragged.getBlock())
+            rb.constraints &= ~RigidbodyConstraints2D.FreezePositionX; // Allow horizontal movement
+        else
+            rb.constraints &= ~RigidbodyConstraints2D.FreezePositionY; // Allow vertical movement
     }
 
     void Drag()
@@ -98,6 +102,7 @@ public class DragController : MonoBehaviour
         lastDragged = null;
         rb.bodyType = RigidbodyType2D.Kinematic;
         rb.bodyType = RigidbodyType2D.Dynamic;
+        rb.constraints |= RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
         rb = null;
         AstarPath.active.Scan();
     }
