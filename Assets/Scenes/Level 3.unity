@@ -194,7 +194,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 7
 --- !u!61 &40368701
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -368,6 +368,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5859369373512590803, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8599652908114542808, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_Name
       value: BlockH 3
@@ -449,6 +453,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5859369373512590803, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8599652908114542808, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_Name
       value: BlockH 3 (7)
@@ -529,6 +537,10 @@ PrefabInstance:
     - target: {fileID: 5859369373512590803, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_BodyType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859369373512590803, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8599652908114542808, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_Name
@@ -698,6 +710,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5859369373512590803, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8599652908114542808, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_Name
       value: BlockH 3 (2)
@@ -782,7 +798,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 7
 --- !u!61 &128238741
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10499,7 +10515,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 7
 --- !u!61 &443894670
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12121,6 +12137,10 @@ PrefabInstance:
     - target: {fileID: 5859369373512590803, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_BodyType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859369373512590803, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8599652908114542808, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_Name
@@ -14057,6 +14077,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5859369373512590803, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8599652908114542808, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_Name
       value: BlockH 3 (5)
@@ -14501,6 +14525,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5859369373512590803, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8599652908114542808, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_Name
       value: BlockH 3 (1)
@@ -14683,6 +14711,10 @@ PrefabInstance:
     - target: {fileID: 5859369373512590803, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_BodyType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859369373512590803, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8599652908114542808, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_Name
