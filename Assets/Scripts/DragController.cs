@@ -10,6 +10,7 @@ public class DragController : MonoBehaviour
     public Vector2 dragTargetPos;
     Block lastDragged;
     Rigidbody2D rb;
+    Player p;
 
     [System.Obsolete]
     void Awake()
@@ -17,6 +18,7 @@ public class DragController : MonoBehaviour
         DragController[] controllers = FindObjectsOfType<DragController>();
         if (controllers.Length > 1)
             Destroy(gameObject);
+        p= FindObjectOfType<Player>();
     }
 
     void Update()
@@ -104,6 +106,6 @@ public class DragController : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Dynamic;
         rb.constraints |= RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
         rb = null;
-        AstarPath.active.Scan();
+        p.CheckForMove();
     }
 }

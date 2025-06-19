@@ -230,6 +230,7 @@ MonoBehaviour:
   checkLeft: {fileID: 2475598537498613700}
   checkRight: {fileID: 1838304396348536344}
   waypoint: {fileID: 3845598836803057494, guid: e44dfe87f1d4d1440841bb051e1bc68e, type: 3}
+  speed: 3.5
 --- !u!114 &2884326363255548331
 MonoBehaviour:
   m_ObjectHideFlags: 0

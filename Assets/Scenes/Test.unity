@@ -9713,6 +9713,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6975313310777353907, guid: f278fc47b8e8e3245a1cfa0583ec34f6, type: 3}
+      propertyPath: speed
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975313310777353907, guid: f278fc47b8e8e3245a1cfa0583ec34f6, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}

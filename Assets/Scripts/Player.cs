@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject waypoint;
     GameObject waypoints=null;
     Collider2D gateCollider;
+    [SerializeField] float speed = 0.05f; 
 
     private void Awake()
     {
@@ -26,10 +27,11 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating(nameof(CheckForMove), 0.75f, 0.5f);
+        //InvokeRepeating(nameof(CheckForMove), 0.75f, 0.5f);
+        
         newPos = Vector3.zero;
-
         Physics2D.IgnoreCollision(gateCollider, GetComponent<Collider2D>());
+        CheckForMove();
     }
 
     private void Update()
@@ -39,7 +41,7 @@ public class Player : MonoBehaviour
 
         if (!isIdle)
         {
-            transform.position = Vector3.MoveTowards(transform.position, newPos, 0.05f);
+            transform.position = Vector3.MoveTowards(transform.position, newPos, speed * Time.deltaTime);
 
             if (Vector3.Distance(transform.position, newPos) < 0.02f)
             {
@@ -61,9 +63,10 @@ public class Player : MonoBehaviour
         anim.SetBool("runD", false);
         isIdle = true;
         anim.SetBool("idleD", true);
+        CheckForMove();
     }
 
-    public void startMove() // sets isIdle and animation to false
+    public void startMove() 
     {
         isIdle = false;
         anim.SetBool("idleD", false);
@@ -114,9 +117,13 @@ public class Player : MonoBehaviour
             return false;
     }
 
-    void CheckForMove()
+    public void CheckForMove()
     {
-        if (!isIdle) return;
+        //if (!isIdle) return;
+
+        if(waypoints!=null)
+            Destroy(waypoints);
+        waypoints = new GameObject("Waypoints");
 
         Vector3 x;
 
