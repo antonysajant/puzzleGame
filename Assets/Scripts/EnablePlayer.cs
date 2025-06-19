@@ -20,7 +20,7 @@ public class EnablePlayer : MonoBehaviour
 
     void Update()
     {
-        transform.position=Vector2.MoveTowards(transform.position, StartPosition, 0.05f);
+        transform.position=Vector2.MoveTowards(transform.position, StartPosition, 3.5f * Time.deltaTime);
         if(Vector2.Distance(transform.position,StartPosition)<0.02f)
         {
             player.enabled = true;
