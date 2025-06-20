@@ -11,6 +11,7 @@ public class DragController : MonoBehaviour
     Block lastDragged;
     Rigidbody2D rb;
     Player p;
+    Vector3 dragOffset;
 
     [System.Obsolete]
     void Awake()
@@ -79,6 +80,9 @@ public class DragController : MonoBehaviour
         isDragActive = true;
         rb = lastDragged.GetComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Dynamic;
+
+        dragOffset = lastDragged.transform.position - worldPos;
+
         if (lastDragged.getBlock())
             rb.constraints &= ~RigidbodyConstraints2D.FreezePositionX; // Allow horizontal movement
         else
@@ -87,9 +91,10 @@ public class DragController : MonoBehaviour
 
     void Drag()
     {
+        Vector3 targetPos = worldPos + dragOffset;
         dragTargetPos = new Vector2(
-            lastDragged.getBlock() ? worldPos.x : lastDragged.transform.position.x,
-            lastDragged.getBlock() ? lastDragged.transform.position.y : worldPos.y
+            lastDragged.getBlock() ? targetPos.x : lastDragged.transform.position.x,
+            lastDragged.getBlock() ? lastDragged.transform.position.y : targetPos.y
         );
     }
 
