@@ -284,6 +284,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1036,56 +1049,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Props BLOCKS_34
-      rect:
-        serializedVersion: 2
-        x: 329
-        y: 240
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d0f20de7e2ba72fe0800000000000000
-      internalID: -1213813358368641267
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Props BLOCKS_35
+      name: gangsigns
       rect:
         serializedVersion: 2
         x: 329
         y: 233
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6e35dc63c92ba3180800000000000000
-      internalID: -9134792510163561498
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Props BLOCKS_36
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 233
-        width: 7
+        width: 14
         height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1635,7 +1604,6 @@ TextureImporter:
       TX Props BLOCKS_33: 7035928177562855043
       TX Props BLOCKS_34: -1213813358368641267
       TX Props BLOCKS_35: -9134792510163561498
-      TX Props BLOCKS_36: -510794744848714659
       TX Props BLOCKS_37: 6279223209742087830
       TX Props BLOCKS_4: -4086650009559896840
       TX Props BLOCKS_40: -2751490536051360346
@@ -1658,6 +1626,7 @@ TextureImporter:
       TX Props BLOCKS_7: -5152524278082277133
       TX Props BLOCKS_8: -8853474187806705488
       TX Props BLOCKS_9: -8290452914668171794
+      gangsigns: -510794744848714659
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
