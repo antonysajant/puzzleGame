@@ -88,7 +88,7 @@ MonoBehaviour:
   closed: {fileID: 363038769287144334}
   open: {fileID: 623925541646767335}
   ui: {fileID: 9059991794595807309}
-  coin: {fileID: 0}
+  coin: {fileID: 7962379535970395336}
 --- !u!1 &363038769287144334
 GameObject:
   m_ObjectHideFlags: 0

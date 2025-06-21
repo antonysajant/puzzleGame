@@ -39,5 +39,13 @@ public class LevelManager: MonoBehaviour
         if (count > 3)
             return;
         coins.text = $"{count} / 3";
+        if (count == 3)
+        {
+            Color blue;
+            if (ColorUtility.TryParseHtmlString("#11BEC5", out blue))
+            {
+                coins.color = blue;
+            }
+        }
     }
 }
