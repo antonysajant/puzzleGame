@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class LevelManager: MonoBehaviour
 {
     Player p;
     [SerializeField] float yEnd;
+    [SerializeField] Text coins;
+    int count = 0;
     int sceneID;
     void Awake()
     {
@@ -27,5 +30,14 @@ public class LevelManager: MonoBehaviour
     public void restart()
     {
         SceneManager.LoadScene(sceneID);
+    }
+
+
+    public void coinplus()
+    {
+        count++;
+        if (count > 3)
+            return;
+        coins.text = $"{count} / 3";
     }
 }

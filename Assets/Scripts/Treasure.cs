@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Threading;
 using UnityEngine;
 
 public class Treasure : MonoBehaviour
@@ -5,15 +7,24 @@ public class Treasure : MonoBehaviour
     [SerializeField] GameObject closed;
     [SerializeField] GameObject open;
     [SerializeField] GameObject ui;
+    [SerializeField] GameObject coin;
     bool opened = false;
+    LevelManager lm;
+
+    void Awake()
+    {
+        lm = FindObjectOfType<LevelManager>();
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.tag == "Player")
+        if (collision.transform.tag == "Player" && !opened)
         { 
             closed.SetActive(false);
             open.SetActive(true);
+            StartCoroutine(CoinFlip());
             opened = true;
+            lm.coinplus();
         }
     }
 
@@ -27,4 +38,10 @@ public class Treasure : MonoBehaviour
             ui.SetActive(false);
     }
 
+    IEnumerator CoinFlip()
+    {
+        coin.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        coin.SetActive(false);
+    }
 }
