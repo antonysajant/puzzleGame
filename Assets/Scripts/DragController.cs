@@ -106,6 +106,10 @@ public class DragController : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
             rb.angularVelocity = 0f;
         }
+        Vector2 pos = lastDragged.transform.position;
+        pos.x = lastDragged.getBlock() ? Mathf.Round(pos.x) : pos.x;
+        pos.y = lastDragged.getBlock() ? pos.y : Mathf.Round(pos.y);
+        lastDragged.transform.position = pos;
         lastDragged = null;
         rb.bodyType = RigidbodyType2D.Kinematic;
         rb.bodyType = RigidbodyType2D.Dynamic;
