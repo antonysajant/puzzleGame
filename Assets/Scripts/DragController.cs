@@ -84,9 +84,9 @@ public class DragController : MonoBehaviour
         dragOffset = lastDragged.transform.position - worldPos;
 
         if (lastDragged.getBlock())
-            rb.constraints &= ~RigidbodyConstraints2D.FreezePositionX; // Allow horizontal movement
+            rb.constraints &= ~RigidbodyConstraints2D.FreezePositionX; 
         else
-            rb.constraints &= ~RigidbodyConstraints2D.FreezePositionY; // Allow vertical movement
+            rb.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
     }
 
     void Drag()
@@ -107,8 +107,20 @@ public class DragController : MonoBehaviour
             rb.angularVelocity = 0f;
         }
         Vector2 pos = lastDragged.transform.position;
+        Vector2 tempPos = pos;
         pos.x = lastDragged.getBlock() ? Mathf.Round(pos.x) : pos.x;
         pos.y = lastDragged.getBlock() ? pos.y : Mathf.Round(pos.y);
+        if (lastDragged.getBigBlock())
+        {
+            float cellSize = 1f;
+            float halfExtent = 1.5f; // 3 cells * 0.5
+            if(lastDragged.getBlock())
+                pos.x = Mathf.Round((tempPos.x - halfExtent) / cellSize) * cellSize + halfExtent;
+            else
+                pos.y = Mathf.Round((tempPos.y - halfExtent) / cellSize) * cellSize + halfExtent;
+
+            lastDragged.transform.position = pos;
+        }
         lastDragged.transform.position = pos;
         lastDragged = null;
         rb.bodyType = RigidbodyType2D.Kinematic;

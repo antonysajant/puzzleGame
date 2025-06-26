@@ -9340,6 +9340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHorizontal: 0
+  isBig: 0
 --- !u!50 &957810156
 Rigidbody2D:
   serializedVersion: 5
@@ -9517,6 +9518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHorizontal: 0
+  isBig: 0
 --- !u!50 &1055926462
 Rigidbody2D:
   serializedVersion: 5
@@ -9789,6 +9791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHorizontal: 1
+  isBig: 0
 --- !u!50 &1140668722
 Rigidbody2D:
   serializedVersion: 5
@@ -10053,6 +10056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHorizontal: 0
+  isBig: 1
 --- !u!50 &1241402205
 Rigidbody2D:
   serializedVersion: 5
@@ -11535,6 +11539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHorizontal: 0
+  isBig: 0
 --- !u!50 &1722750139
 Rigidbody2D:
   serializedVersion: 5

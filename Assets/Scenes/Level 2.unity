@@ -257,6 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHorizontal: 0
+  isBig: 0
 --- !u!50 &40368700
 Rigidbody2D:
   serializedVersion: 5
@@ -606,6 +607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHorizontal: 0
+  isBig: 0
 --- !u!50 &128238740
 Rigidbody2D:
   serializedVersion: 5
@@ -10884,6 +10886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHorizontal: 0
+  isBig: 0
 --- !u!50 &616893512
 Rigidbody2D:
   serializedVersion: 5
@@ -14218,6 +14221,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3053450582462638334, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
+      propertyPath: isBig
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3059232639985576291, guid: e02170a74d3787b42908c92413be4dd9, type: 3}
       propertyPath: m_Size.x
       value: 3.1137638
@@ -14538,6 +14545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHorizontal: 0
+  isBig: 0
 --- !u!50 &2070879090
 Rigidbody2D:
   serializedVersion: 5

@@ -4,6 +4,7 @@ public class Block : MonoBehaviour
 {
     [SerializeField] bool isHorizontal = true;
     Rigidbody2D rb;
+    [SerializeField] bool isBig = false;
 
     [System.Obsolete]
     void Awake()
@@ -20,5 +21,10 @@ public class Block : MonoBehaviour
     {
         rb.linearVelocity = Vector2.zero;
         rb.angularVelocity = 0f;
+    }
+
+    public bool getBigBlock()
+    {
+        return isBig;
     }
 }
