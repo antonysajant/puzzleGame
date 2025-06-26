@@ -81,6 +81,8 @@ public class DragController : MonoBehaviour
         rb = lastDragged.GetComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Dynamic;
 
+        dragTargetPos = rb.position;
+
         dragOffset = lastDragged.transform.position - worldPos;
 
         if (lastDragged.getBlock())
